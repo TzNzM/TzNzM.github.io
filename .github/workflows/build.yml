@@ -21,7 +21,10 @@ jobs:
           node-version: "22.x"
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install hexo-cli -g
+
+          npm install
 
       - name: Build Website
         run: hexo g
